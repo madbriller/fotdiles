@@ -1,0 +1,218 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "set php",
+		"selected_items":
+		[
+			[
+				"set php",
+				"Set Syntax: PHP"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/mnt/share/data/feynman/websites/ukmg_admin/master/application/controllers/requests.php",
+		"/mnt/share/data/feynman/websites/ukmg_admin/master/application/views/requests/main.php",
+		"/mnt/share/data/feynman/websites/ukmg_admin/master/application/config/nav.php",
+		"/mnt/share/data/feynman/websites/ukmg_admin/master/application/helpers/navigation_helper.php",
+		"/mnt/share/data/feynman/websites/ukmg_admin/master/application/views/layout/page_navigation.php",
+		"/mnt/share/data/feynman/websites/ukmg_admin/master/database/2015-08-18.sql",
+		"/mnt/share/data/feynman/websites/ukmg_admin/master/application/controllers/notes.php",
+		"/mnt/share/data/feynman/websites/ukmg_admin/master/system/core/Common.php",
+		"/mnt/share/data/feynman/websites/ukmg_admin/master/application/models/ukmg/user.php",
+		"/mnt/share/data/feynman/websites/ukmg_admin/master/application/controllers/main.php",
+		"/mnt/share/data/feynman/websites/ukmg_admin/master/application/config/routes.php",
+		"/mnt/share/data/feynman/websites/ukmg_admin/master/application/models/ukmg/request.php",
+		"/mnt/share/data/feynman/websites/ukmg_admin/master/database/2015-07-21-15:55:00.sql",
+		"/home/bradmiller/.config/sublime-text-3/Packages/User/Package Control.sublime-settings"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"<project>",
+			"/mnt/share/data/feynman/websites/ukmg_admin/master/application/views",
+			"<project>",
+			"/mnt/share/data/feynman/websites/ukmg_admin/master"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"14",
+			"show_404()",
+			"btn-group pull-left",
+			"unassigned",
+			"navigation(",
+			"view(\"welcome\")",
+			"Summary",
+			"::before",
+			"class=\"requests\"",
+			"nav-pills",
+			"href=\"/requests",
+			"requests",
+			"can_view_requests",
+			"redirect(\"/requests",
+			"/requests",
+			"requests",
+			"requests.php",
+			"controller\\requests.php",
+			"can_remove_notes"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "grunt.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"requests",
+				"application/controllers/requests.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 336.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

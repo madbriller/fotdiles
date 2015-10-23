@@ -1,0 +1,47 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"AdvancedNewFile",
+		"All Autocomplete",
+		"Blade Snippets",
+		"Blade Spacer",
+		"Bootstrap 3 Snippets",
+		"BracketHighlighter",
+		"Can I Use",
+		"Clipboard Manager",
+		"CSS Unminifier",
+		"Devastate",
+		"Diffy",
+		"DocBlockr",
+		"Emmet",
+		"Expand Tabs on Save",
+		"FileDiffs",
+		"GitGutter",
+		"Grunt",
+		"Icon Fonts",
+		"Indent XML",
+		"jQuery",
+		"Laravel 5 Artisan",
+		"Laravel Blade Highlighter",
+		"LESS",
+		"Markdown Preview",
+		"MarkdownEditing",
+		"Materialize",
+		"Minifier",
+		"Missing Palette Commands",
+		"Origami",
+		"Package Control",
+		"PackageResourceViewer",
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"SublimeLinter-phpcs",
+		"Syntax Highlighting for Sass",
+		"Tab Filter",
+		"Theme - Brogrammer",
+		"Xdebug Client"
+	]
+}

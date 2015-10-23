@@ -1,0 +1,5 @@
+{
+	"phpcs_executable_path": "/home/bradmiller/.composer/vendor/bin/phpcs",
+	"phpcs_show_errors_on_save": false,
+	"phpcs_show_quick_panel": false
+}
