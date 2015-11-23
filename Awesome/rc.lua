@@ -118,7 +118,7 @@ local layouts =
 -- {{{ Tags
 -- Define a tag table which hold all screen tags.
 tags = {}
-tags[1] = awful.tag({ "Subl", "Term", "Web", "IM", 5, 6, 7, 8, "Subl2" }, 1, layouts[1])
+tags[1] = awful.tag({ "Edit", "Term", "Web", "IM", "Notes", 6, 7, 8, "Subl2" }, 1, layouts[1])
 tags[2] = awful.tag({ "Web", "Term", "Exp", "Email", "Tunes", "Test", 7, 8, 9 }, 2, layouts[1])
 
 
@@ -497,4 +497,5 @@ end)
 
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
+awful.util.spawn("nm-applet")
 -- }}}

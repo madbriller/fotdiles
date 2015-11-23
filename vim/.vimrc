@@ -20,7 +20,7 @@ set cursorline
 set wildmenu
 set autoindent
 set confirm
-
+let mapleader = ","
 
 if !exists('g:airline_symbols')
       let g:airline_symbols = {}
@@ -49,8 +49,8 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 Plugin 'airblade/vim-gitgutter'
-Bundle 'Joonty/vim-phpqa.git'
 Bundle 'joonty/vdebug.git'
+Plugin 'scrooloose/syntastic'
 Plugin 'mklabs/grunt.vim'
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
@@ -58,12 +58,22 @@ Plugin 'bling/vim-airline'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
-"Plugin 'crusoexia/vim-monokai'
 Plugin 'tpope/vim-fugitive'
 Plugin 'DrowsySaturn/VIvid.vim'
 Plugin 'sickill/vim-monokai'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'kien/ctrlp.vim'
+Plugin 'moll/vim-bbye'
+Plugin 'StanAngeloff/php.vim'
+Plugin 'tobyS/vmustache'
+Plugin 'tobyS/pdv'
+Plugin 'majutsushi/tagbar'
+Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'scrooloose/nerdtree'
+Plugin 'othree/html5.vim'
+Plugin 'airblade/vim-rooter'
+Plugin 'tpope/vim-obsession'
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'L9'
 " All of your Plugins must be added before the following line
@@ -94,11 +104,70 @@ nnoremap j gj
 nnoremap k gk
 
 set backup
-set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set backupdir=~/.vim/tmp
 set backupskip=/tmp/*,/private/tmp/*
-set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set directory=~/.vim/tmp
 set writebackup
+set undodir=~/.vim/tmp
+set undofile
 let g:vdebug_options = {}
-let g:vdebug_options["path_maps"] = {"/vagrant/src": "/home/bradmiller/Bitbucket Clones/Matrix"}
-let g:vdebug_options["port"] = 9000
+let g:vdebug_options["port"] = 9001
 let g:vdebug_options["server"] = '0.0.0.0'
+
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site)$',
+  \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
+  \}
+
+"PHP syntax highlighting plugin config
+autocmd BufWritePre *.css, *.js, *.blade.php, *.php,  :call <SID>StripTrailingWhitespaces()
+function! PhpSyntaxOverride()
+hi! def link phpDocTags  phpDefine
+hi! def link phpDocParam phpType
+endfunction
+
+augroup phpSyntaxOverride
+autocmd!
+autocmd FileType php call PhpSyntaxOverride()
+augroup END
+
+"Move lines up and down mappings
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
+
+"Configuring linters for php + js
+let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
+let g:syntastic_javascript_checkers = ['jshint']
+
+"Docblockr config
+let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
+nnoremap <buffer> <C-d> :call pdv#DocumentWithSnip()<CR>
+
+"More signs for gitgutter!
+let g:gitgutter_max_signs = 500
+
+"Ctrl-p mappings for buffer list and recent files
+nnoremap <leader>b :CtrlPBuffer<CR>
+nnoremap <leader>m :CtrlPMRU<CR>
+
+"Indent guides config
+set ts=4 sw=4 et
+let g:indent_guides_start_level = 1
+let g_indent_guides_guide_size = 1
+let g:indent_guides_color_change_percent = 3
+"only show guides in Gvim
+au GUIEnter * :IndentGuidesToggle
+
+"Vim-rooter disable auto change directory and add leader key
+let g:rooter_manual_only=1
+map <silent> <unique> <Leader>r <Plug>RooterChangeToRootDirectory
+
+"Tagbar leader
+nmap <Leader>t :TagbarOpenAutoClose<CR> 
+
+"Nerdtree leader
+map <Leader>n :NERDTreeToggle<CR>

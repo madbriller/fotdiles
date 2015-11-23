@@ -68,7 +68,7 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 
-export EDITOR='subl'
+export EDITOR='vim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -81,17 +81,33 @@ export EDITOR='subl'
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-alias mymatrix="cd ~/Bitbucket\ Clones/Matrix"
+# config stuff
+alias zshrc="vim ~/.zshrc"
+alias ohmyzshrc="vim ~/.oh-my-zsh"
+alias vimrc="vim ~/.vimrc"
+alias rclua="vim ~/.config/awesome/rc.lua"
+#
+#vagrant stuff
+alias vd="vagrant destroy"
+alias vu="vagrant up"
+alias vs="vagrant ssh"
+
+alias vmatrix="cd ~/Vagrant\ Projects/Matrix"
+alias vmatrixssh="cd ~/Vagrant\ Projects/Matrix && vagrant ssh" 
+alias vgjd="cd ~/Vagrant\ Projects/gjd/brad"
+alias vgjdssh="cd ~/Vagrant\ Projects/gjd/brad && vagrant ssh"
+alias vusp="cd ~/Vagrant\ Projects/Upskill"
+alias vuspssh="cd ~/Vagrant\ Projects/Upskill && vagrant ssh"
 
 #codeception stuff
 alias cc="codecept"
 
+#misc stuff
 alias gsc="gnome-screensaver-command -l"
 
+#tmux stuff
 alias tks="tmux kill-server"
 alias rs="tmux rename-session"
+
 alias mygjd="cd /mnt/share/data/feynman/websites/gjd/brad"
 path+=vendor/bin/

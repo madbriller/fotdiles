@@ -4,7 +4,7 @@
 	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
 	"enable_telemetry": false,
 	"ensure_newline_at_eof_on_save": true,
-	"font_size": 10,
+	"font_size": 9,
 	"highlight_line": true,
 	"ignored_packages":
 	[
