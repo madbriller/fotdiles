@@ -93,11 +93,19 @@ alias vu="vagrant up"
 alias vs="vagrant ssh"
 
 alias vmatrix="cd ~/Vagrant\ Projects/Matrix"
-alias vmatrixssh="cd ~/Vagrant\ Projects/Matrix && vagrant ssh" 
+alias vmatrixssh="cd ~/Vagrant\ Projects/Matrix && vagrant ssh"
+
 alias vgjd="cd ~/Vagrant\ Projects/gjd/brad"
 alias vgjdssh="cd ~/Vagrant\ Projects/gjd/brad && vagrant ssh"
+
 alias vusp="cd ~/Vagrant\ Projects/Upskill"
 alias vuspssh="cd ~/Vagrant\ Projects/Upskill && vagrant ssh"
+
+alias musp="cd /mnt/share/data/usptools/usp"
+alias muspssh="connect hnuspdev"
+
+alias vuspgitagg="cd ~/Vagrant\ Projects/Upskill/src && gitagg"
+alias vuspgitfet="cd ~/Vagrant\ Projects/Upskill/src && gitfet"
 
 #codeception stuff
 alias cc="codecept"
@@ -111,3 +119,10 @@ alias rs="tmux rename-session"
 
 alias mygjd="cd /mnt/share/data/feynman/websites/gjd/brad"
 path+=vendor/bin/
+
+function gitagg() {
+    for i in * ; do cd $i; echo $i ; git describe --dirty --all ; echo '_____________________'; cd .. ; done 
+}
+function gitfet() {
+    for i in * ; do cd $i; echo $i ; git fetch bitbucket ; echo '______________________'; cd .. ; done 
+}
